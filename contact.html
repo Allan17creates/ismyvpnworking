@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact IsMyVPNWorking.com — get in touch with questions, bug reports, or affiliate partnership enquiries.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ismyvpnworking.com/contact.html">
+  <meta property="og:title" content="Contact Us — IsMyVPNWorking.com">
+  <meta property="og:description" content="Get in touch with the IsMyVPNWorking.com team.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ismyvpnworking.com/contact.html">
+  <meta property="og:site_name" content="IsMyVPNWorking.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us — IsMyVPNWorking.com">
+  <meta name="twitter:description" content="Get in touch with the IsMyVPNWorking.com team.">
+  <title>Contact Us | IsMyVPNWorking.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+        <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
+          <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        IsMyVPNWorking<span class="logo-dot">.com</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button id="hamburger" class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-nav" class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Have a question, spotted a bug, or interested in working with us? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="page-content">
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+
+        <div>
+          <h2 style="margin-top:0;">Send Us a Message</h2>
+          <p style="margin-bottom:1.5rem;">Fill in the form below and we'll get back to you within 48 hours. Or email us directly at <a href="mailto:contact@ismyvpnworking.com">contact@ismyvpnworking.com</a>.</p>
+
+          <form class="contact-form" action="#" method="post" aria-label="Contact form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="name">Your Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject <span aria-hidden="true">*</span></label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="general">General Enquiry</option>
+                <option value="bug">Report an Issue</option>
+                <option value="affiliate">Affiliate Partnership</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell us what's on your mind…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+            <p id="form-success" style="display:none; color:var(--accent-green); margin-top:1rem; text-align:center; font-weight:600;">
+              ✓ Message sent! We'll be in touch within 48 hours.
+            </p>
+            <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.75rem; text-align:center;">
+              Note: This form does not currently submit to a backend server. Please email us directly at <a href="mailto:contact@ismyvpnworking.com">contact@ismyvpnworking.com</a> for a guaranteed response.
+            </p>
+          </form>
+        </div>
+
+        <div>
+          <h2 style="margin-top:0;">Other Ways to Reach Us</h2>
+
+          <div style="display:flex; flex-direction:column; gap:1.25rem; margin-bottom:2rem;">
+            <div class="feature-card" style="padding:1.25rem;">
+              <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:0.15rem;" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <div>
+                  <strong style="display:block; margin-bottom:0.2rem;">Email</strong>
+                  <a href="mailto:contact@ismyvpnworking.com">contact@ismyvpnworking.com</a>
+                  <p style="font-size:0.82rem; color:var(--text-secondary); margin:0.25rem 0 0;">Response time: within 48 hours</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-card" style="padding:1.25rem;">
+              <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:0.15rem;" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                <div>
+                  <strong style="display:block; margin-bottom:0.2rem;">Affiliate Partnerships</strong>
+                  <a href="mailto:affiliates@ismyvpnworking.com">affiliates@ismyvpnworking.com</a>
+                  <p style="font-size:0.82rem; color:var(--text-secondary); margin:0.25rem 0 0;">For VPN providers interested in being featured</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-card" style="padding:1.25rem;">
+              <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:0.15rem;" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <div>
+                  <strong style="display:block; margin-bottom:0.2rem;">Privacy Requests</strong>
+                  <a href="mailto:privacy@ismyvpnworking.com">privacy@ismyvpnworking.com</a>
+                  <p style="font-size:0.82rem; color:var(--text-secondary); margin:0.25rem 0 0;">GDPR, CCPA, and data rights requests</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="did-you-know">
+            <h3>Before You Write</h3>
+            <ul>
+              <li>Check our <a href="blog.html">blog guides</a> — many common VPN questions are answered there</li>
+              <li>For tool accuracy issues, include your VPN provider name and what result you expected</li>
+              <li>We cannot provide VPN technical support — contact your VPN provider's support team for app issues</li>
+              <li>Affiliate enquiries should include your website URL and audience size</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+          <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
+            <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          IsMyVPNWorking<span class="logo-dot">.com</span>
+        </a>
+        <p class="footer__tagline">Free VPN testing tool. No signup. No tracking.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Affiliate Disclosure</h4>
+        <p class="footer__disclosure">This site contains affiliate links. We may earn a commission at no cost to you. We only recommend VPNs evaluated for security and privacy.</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <p>© 2025 IsMyVPNWorking.com — Made for privacy-conscious internet users worldwide.</p>
+      <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">Affiliate Disclosure</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vpncheck.js"></script>
+<script>
+function handleFormSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'block';
+  e.target.reset();
+}
+</script>
+</body>
+</html>

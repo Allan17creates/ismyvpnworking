@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Is my VPN working? Find out instantly — free online tool that checks your IP address, detects VPN leaks, DNS leaks, and WebRTC leaks. No signup required.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ismyvpnworking.com/">
+
+  <meta property="og:title" content="Is My VPN Working? — Free Instant VPN Leak Test">
+  <meta property="og:description" content="Check instantly if your VPN is protecting you or silently leaking your real IP address. Free tool — no signup required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ismyvpnworking.com/">
+  <meta property="og:site_name" content="IsMyVPNWorking.com">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Is My VPN Working? — Free Instant VPN Leak Test">
+  <meta name="twitter:description" content="Check instantly if your VPN is protecting you or silently leaking your real IP address. Free tool — no signup required.">
+
+  <title>Is My VPN Working? — Free Instant VPN Leak Test | IsMyVPNWorking.com</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "IsMyVPNWorking.com",
+    "description": "Free online tool to instantly check if your VPN is working or leaking your real IP address",
+    "url": "https://www.ismyvpnworking.com",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does it mean if my VPN is leaking?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A VPN leak means your VPN app appears connected but your real IP address, location, or DNS requests are still visible to websites and your ISP. This usually happens due to WebRTC leaks, DNS leaks, or IPv6 leaks. A leaking VPN provides a false sense of security." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does my VPN say connected but the test shows a leak?",
+        "acceptedAnswer": { "@type": "Answer", "text": "VPN apps show connected based on whether the VPN tunnel is established, but this does not mean every type of traffic is protected. WebRTC is a browser feature that can bypass the VPN tunnel entirely. DNS requests sometimes fall back to your ISP's servers when the VPN has a brief disconnection." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this test 100% accurate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Our test checks the most common and important indicators of VPN health — your public IP address, your DNS resolver, and WebRTC behaviour. It is highly reliable for most use cases. For critical privacy needs, we also recommend ipleak.net." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you store my IP address or data?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. We do not log, store, or sell your IP address or any other data from this check. The test runs entirely in your browser." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does the test show a different location than where I actually am?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If your VPN is working correctly, that is exactly what should happen. The location shown is where your VPN server is located — not your real physical location. This is your VPN doing its job." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a DNS leak and why does it matter?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A DNS leak occurs when your device's DNS requests go to your ISP's DNS servers instead of through the VPN tunnel. Your ISP can then see every website you visit even though your IP address appears hidden." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I fix a VPN leak?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For DNS leaks: enable DNS leak protection in your VPN app. For WebRTC leaks: install uBlock Origin and enable WebRTC blocking. For persistent leaks: consider switching to a VPN provider with a stronger track record." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this tool on my phone?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our tool works on all modern browsers on iPhone, Android, and any device. Enable your VPN app and reload this page to test whether it is working." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ========== NAVIGATION ========== -->
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+        <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
+          <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        IsMyVPNWorking<span class="logo-dot">.com</span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="hamburger" class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-nav" class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- ========== HERO / TOOL ========== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <span class="hero__eyebrow">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><circle cx="6" cy="6" r="6"/></svg>
+        Live VPN Check
+      </span>
+      <h1 id="hero-heading">Is My VPN Working?</h1>
+      <p class="hero__sub">Find out instantly if your VPN is protecting you — or silently leaking your real identity. No signup required.</p>
+
+      <!-- Result Card -->
+      <div id="result-card" class="result-card state-checking" aria-live="polite" aria-atomic="true" role="status">
+        <div id="card-content">
+          <!-- Populated by vpncheck.js -->
+          <div class="spinner" role="status" aria-label="Checking your connection"></div>
+          <h2 class="result-card__headline text-yellow">Checking Your Connection…</h2>
+          <p class="result-card__subheadline">Analysing your IP address and VPN status</p>
+        </div>
+      </div>
+
+      <!-- Re-run -->
+      <div class="rerun-wrap">
+        <button id="rerun-btn" class="btn btn-outline" aria-label="Re-run the VPN check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+          Re-run Test
+        </button>
+        <span class="last-checked" id="last-checked" aria-live="polite"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ADSENSE AD UNIT: Replace with your AdSense ad code -->
+  <div class="container">
+    <div class="ad-container" aria-label="Advertisement">
+      <p class="ad-label">Advertisement</p>
+      <!-- INSERT ADSENSE CODE HERE -->
+    </div>
+  </div>
+
+  <!-- ========== WHAT WE CHECK ========== -->
+  <section class="section section-alt" aria-labelledby="checks-heading">
+    <div class="container">
+      <div class="section__header">
+        <h2 id="checks-heading">What We Check For You</h2>
+        <p>Three critical VPN health indicators tested automatically every time you load this page.</p>
+      </div>
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3>IP Address Leak</h3>
+          <p>We detect your real public IP address and check whether your VPN is masking it or exposing your true location to every website you visit.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <h3>DNS Leak Test</h3>
+          <p>Even when your IP is hidden, DNS leaks can still expose your browsing activity to your ISP. We check your DNS servers to make sure nothing is slipping through.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>VPN Provider Check</h3>
+          <p>We identify whether your connection is routing through a known VPN server and which provider is protecting you, giving you confidence your VPN is active.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY THIS MATTERS ========== -->
+  <section class="section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="two-col">
+        <div class="prose">
+          <h2 id="why-heading">Why Your VPN Might Be Failing You</h2>
+          <p>Millions of people use VPNs every day believing they are fully protected. The reality is more complicated. VPN leaks are far more common than most people realise — and they can happen silently without any warning from your VPN app. A VPN can display "connected" in green while simultaneously exposing your real IP address through WebRTC leaks built into your browser, DNS requests that travel outside the encrypted tunnel, or IPv6 traffic that your VPN simply does not cover.</p>
+          <p>A DNS leak is one of the most overlooked vulnerabilities in VPN security. DNS (Domain Name System) acts as the internet's address book, converting domain names like google.com into IP addresses. When you use a VPN, these DNS lookups should happen inside the encrypted tunnel. But when a DNS leak occurs, those requests bypass the tunnel and go directly to your Internet Service Provider's servers — meaning your ISP can still see every website you visit, even though your IP address appears to be hidden.</p>
+          <p>This tool runs multiple checks simultaneously to give you a complete picture of your VPN's actual performance, not just whether the app says it is connected. Within seconds, you get a plain-English result that tells you exactly what is happening with your connection — no technical knowledge required.</p>
+        </div>
+        <div>
+          <div class="did-you-know" role="complementary" aria-label="Did you know facts">
+            <h3>Did You Know?</h3>
+            <ul>
+              <li>Over 25% of free VPN apps have been found to contain malware or track user data</li>
+              <li>WebRTC leaks can expose your real IP address even on premium paid VPN services</li>
+              <li>DNS leaks are the most common type of VPN failure — and the most overlooked</li>
+              <li>Your ISP can see your browsing history even if your VPN app shows "connected"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VPN AFFILIATE CARDS ========== -->
+  <section class="section section-alt" aria-labelledby="vpns-heading">
+    <div class="container">
+      <div class="section__header">
+        <h2 id="vpns-heading">VPNs We Trust to Keep You Protected</h2>
+        <p>If your VPN test failed, here are the providers we recommend based on security audits and independent testing.</p>
+      </div>
+
+      <p class="affiliate-disclosure">
+        <strong>Affiliate Disclosure:</strong> We may earn a commission if you purchase through our links. This helps keep our tool free. We only recommend VPNs we have evaluated for security and privacy.
+      </p>
+
+      <div class="vpn-grid">
+
+        <!-- NordVPN -->
+        <div class="vpn-card">
+          <div class="vpn-card__header">
+            <span class="vpn-card__name">NordVPN</span>
+            <span class="vpn-badge">Top Pick</span>
+          </div>
+          <div class="vpn-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <ul class="vpn-card__features">
+            <li>Military-grade AES-256 encryption</li>
+            <li>Strict no-logs policy (audited)</li>
+            <li>6,000+ servers in 111 countries</li>
+          </ul>
+          <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK -->
+             rel="sponsored noopener" target="_blank" class="btn btn-primary">Get NordVPN</a>
+          <p class="vpn-card__price">From $3.99/month</p>
+        </div>
+
+        <!-- ExpressVPN -->
+        <div class="vpn-card">
+          <div class="vpn-card__header">
+            <span class="vpn-card__name">ExpressVPN</span>
+            <span class="vpn-badge">Fastest Speeds</span>
+          </div>
+          <div class="vpn-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <ul class="vpn-card__features">
+            <li>Lightway protocol for ultra-fast speeds</li>
+            <li>No-logs policy verified by PwC audit</li>
+            <li>3,000+ servers in 105 countries</li>
+          </ul>
+          <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK -->
+             rel="sponsored noopener" target="_blank" class="btn btn-primary">Get ExpressVPN</a>
+          <p class="vpn-card__price">From $6.67/month</p>
+        </div>
+
+        <!-- Surfshark -->
+        <div class="vpn-card">
+          <div class="vpn-card__header">
+            <span class="vpn-card__name">Surfshark</span>
+            <span class="vpn-badge">Best Value</span>
+          </div>
+          <div class="vpn-card__stars" aria-label="4.5 out of 5 stars">★★★★½</div>
+          <ul class="vpn-card__features">
+            <li>Unlimited simultaneous device connections</li>
+            <li>CleanWeb blocks ads and malware</li>
+            <li>3,200+ servers in 100 countries</li>
+          </ul>
+          <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK -->
+             rel="sponsored noopener" target="_blank" class="btn btn-primary">Get Surfshark</a>
+          <p class="vpn-card__price">From $2.49/month</p>
+        </div>
+
+        <!-- CyberGhost -->
+        <div class="vpn-card">
+          <div class="vpn-card__header">
+            <span class="vpn-card__name">CyberGhost</span>
+            <span class="vpn-badge">Most Servers</span>
+          </div>
+          <div class="vpn-card__stars" aria-label="4 out of 5 stars">★★★★☆</div>
+          <ul class="vpn-card__features">
+            <li>9,700+ servers — largest network</li>
+            <li>Dedicated streaming and torrenting profiles</li>
+            <li>45-day money-back guarantee</li>
+          </ul>
+          <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK -->
+             rel="sponsored noopener" target="_blank" class="btn btn-primary">Get CyberGhost</a>
+          <p class="vpn-card__price">From $2.19/month</p>
+        </div>
+
+        <!-- PIA -->
+        <div class="vpn-card">
+          <div class="vpn-card__header">
+            <span class="vpn-card__name">Private Internet Access</span>
+            <span class="vpn-badge">Open Source</span>
+          </div>
+          <div class="vpn-card__stars" aria-label="4 out of 5 stars">★★★★☆</div>
+          <ul class="vpn-card__features">
+            <li>Open-source and independently audited</li>
+            <li>Up to 10 simultaneous connections</li>
+            <li>Built-in ad and malware blocker</li>
+          </ul>
+          <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK -->
+             rel="sponsored noopener" target="_blank" class="btn btn-primary">Get PIA</a>
+          <p class="vpn-card__price">From $2.03/month</p>
+        </div>
+
+        <!-- ProtonVPN -->
+        <div class="vpn-card">
+          <div class="vpn-card__header">
+            <span class="vpn-card__name">ProtonVPN</span>
+            <span class="vpn-badge">Privacy Focused</span>
+          </div>
+          <div class="vpn-card__stars" aria-label="4.5 out of 5 stars">★★★★½</div>
+          <ul class="vpn-card__features">
+            <li>Built by CERN scientists and privacy advocates</li>
+            <li>Swiss-based — strong privacy laws</li>
+            <li>Free tier available — no data limits</li>
+          </ul>
+          <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK -->
+             rel="sponsored noopener" target="_blank" class="btn btn-primary">Get ProtonVPN</a>
+          <p class="vpn-card__price">From $4.99/month</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="section" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section__header">
+        <h2 id="how-heading">How Our VPN Test Works</h2>
+        <p>Three steps, fully automatic, no technical knowledge required.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number" aria-hidden="true">1</div>
+          <h3>Your Browser Sends a Request</h3>
+          <p>When you load this page, your browser automatically makes a request to our IP detection service. No data is stored — we only read what your connection reveals publicly to every website on the internet.</p>
+        </div>
+        <div class="step">
+          <div class="step__number" aria-hidden="true">2</div>
+          <h3>We Analyse Your Connection</h3>
+          <p>We check your IP address against a database of known VPN server ranges, examine your DNS resolver, and run a WebRTC leak detection check simultaneously — all within seconds.</p>
+        </div>
+        <div class="step">
+          <div class="step__number" aria-hidden="true">3</div>
+          <h3>You Get an Instant Result</h3>
+          <p>Within seconds you see a clear, plain-English result telling you exactly whether your VPN is working, leaking, or not active at all — no technical knowledge required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section section-alt" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section__header">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-1">
+            What does it mean if my VPN is leaking?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faq-1" class="faq-item__body">
+            <p>A VPN leak means your VPN app appears connected but your real IP address, location, or DNS requests are still visible to websites and your ISP. This usually happens due to WebRTC leaks (built into browsers), DNS leaks (when DNS requests travel outside the VPN tunnel), or IPv6 leaks (when your device uses IPv6 while the VPN only covers IPv4). A leaking VPN provides a false sense of security — you think you are protected but your real identity is exposed.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-2">
+            Why does my VPN say connected but the test shows a leak?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faq-2" class="faq-item__body">
+            <p>VPN apps show "connected" based on whether the VPN tunnel is established — but this does not mean every type of traffic is protected. WebRTC is a browser feature that can bypass the VPN tunnel entirely. DNS requests sometimes fall back to your ISP's servers when the VPN has a brief disconnection. Your VPN may only protect IPv4 traffic while your device also communicates via IPv6. This is exactly why running an independent test like this one is so important.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-3">
+            Is this test 100% accurate?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faq-3" class="faq-item__body">
+            <p>Our test checks the most common and important indicators of VPN health — your public IP address, your DNS resolver, and WebRTC behaviour. It is highly reliable for most use cases. However, no single browser-based test can guarantee 100% certainty. For critical privacy needs, we recommend also testing with a dedicated tool like ipleak.net and using a reputable paid VPN service with a verified no-logs policy.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-4">
+            Do you store my IP address or data?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faq-4" class="faq-item__body">
+            <p>No. We do not log, store, or sell your IP address or any other data from this check. The test runs entirely in your browser using publicly available APIs. We have no database of user checks. Please read our full <a href="privacy.html">Privacy Policy</a> for complete details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-5">
+            Why does the test show a different location than where I actually am?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faq-5" class="faq-item__body">
+            <p>If your VPN is working correctly, that is exactly what should happen. The location shown is where your VPN server is located — not your real physical location. This is your VPN doing its job: replacing your real IP address and location with one from a server in another country. If you see a foreign city you don't recognise, your VPN is working.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-6">
+            What is a DNS leak and why does it matter?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faq-6" class="faq-item__body">
+            <p>DNS (Domain Name System) is the internet's address book — it converts website names like google.com into IP addresses. When you use a VPN, your DNS requests should travel through the encrypted tunnel. A DNS leak occurs when those requests instead go to your ISP's DNS servers outside the tunnel. The result: your ISP can see every website you visit even though your IP address appears hidden. DNS leaks are the most common and overlooked form of VPN failure.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-7">
+            How do I fix a VPN leak?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faq-7" class="faq-item__body">
+            <p>First, identify the type of leak using our tool. For DNS leaks: enable the "DNS leak protection" setting in your VPN app (most reputable VPNs have this option). For WebRTC leaks: install a browser extension like uBlock Origin and enable WebRTC blocking, or disable WebRTC in your browser's advanced settings. For persistent leaks despite these fixes: consider switching to a VPN provider with a stronger track record. See our <a href="#vpns-heading">recommended providers</a> above.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-8">
+            Can I use this tool on my phone?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="faq-8" class="faq-item__body">
+            <p>Yes. Our tool works on all modern browsers on iPhone, Android, Windows, Mac, and any other device with a web browser. The VPN check runs automatically when you load the page. If you have a VPN app installed on your phone, enable it first and then reload this page to test whether it is working correctly on your mobile device.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ADSENSE AD UNIT: Replace with your AdSense ad code -->
+  <div class="container">
+    <div class="ad-container" aria-label="Advertisement">
+      <p class="ad-label">Advertisement</p>
+      <!-- INSERT ADSENSE CODE HERE -->
+    </div>
+  </div>
+
+  <!-- ========== BLOG PREVIEW ========== -->
+  <section class="section" aria-labelledby="blog-preview-heading">
+    <div class="container">
+      <div class="section__header">
+        <h2 id="blog-preview-heading">Learn More About VPN Security</h2>
+        <p>Our guides explain everything about VPNs, leaks, and online privacy in plain English.</p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="tag">How-to Guide</span>
+            <span class="read-time">6 min read</span>
+          </div>
+          <h3><a href="blog/vpn-leak-test.html">How to Know if Your VPN is Actually Working (or Silently Failing You)</a></h3>
+          <p>Millions of people use VPNs believing they are fully protected. Here is how to verify yours is actually doing its job and what to do if it is not.</p>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="tag">Security Tips</span>
+            <span class="read-time">5 min read</span>
+          </div>
+          <h3><a href="blog/signs-vpn-leaking.html">7 Signs Your VPN is Leaking Your Real IP Address Right Now</a></h3>
+          <p>Your VPN might be showing as connected while quietly exposing your real location. These are the specific warning signs to look for in 2025.</p>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card__meta">
+            <span class="tag">Explainer</span>
+            <span class="read-time">7 min read</span>
+          </div>
+          <h3><a href="blog/what-is-dns-leak.html">What is a DNS Leak and Why It Means Your VPN is Useless</a></h3>
+          <p>DNS leaks are the silent killer of VPN privacy. Most people have never heard of them — but they could be exposing everything you do online.</p>
+        </article>
+      </div>
+
+      <div class="view-all">
+        <a href="blog.html">View All Articles →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+          <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
+            <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          IsMyVPNWorking<span class="logo-dot">.com</span>
+        </a>
+        <p class="footer__tagline">Free VPN testing tool. No signup. No tracking.<br>Built for privacy-conscious internet users worldwide.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Affiliate Disclosure</h4>
+        <p class="footer__disclosure">This site contains affiliate links to VPN providers. We may earn a commission at no additional cost to you if you sign up through our links. We only recommend products we have evaluated for security and privacy. Our tool results are never influenced by commercial relationships.</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <p>© 2025 IsMyVPNWorking.com — Made for privacy-conscious internet users worldwide.</p>
+      <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">Affiliate Disclosure</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vpncheck.js"></script>
+</body>
+</html>

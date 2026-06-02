@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About IsMyVPNWorking.com — a free VPN testing tool built by privacy advocates to help everyone verify their VPN is actually working.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ismyvpnworking.com/about.html">
+  <meta property="og:title" content="About Us — IsMyVPNWorking.com">
+  <meta property="og:description" content="Learn about the team behind IsMyVPNWorking.com and why we built this free VPN testing tool.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ismyvpnworking.com/about.html">
+  <meta property="og:site_name" content="IsMyVPNWorking.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us — IsMyVPNWorking.com">
+  <meta name="twitter:description" content="Learn about the team behind IsMyVPNWorking.com and why we built this free VPN testing tool.">
+  <title>About Us | IsMyVPNWorking.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+        <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
+          <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        IsMyVPNWorking<span class="logo-dot">.com</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="hamburger" class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-nav" class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>About IsMyVPNWorking.com</h1>
+      <p>Built by privacy advocates who believe everyone deserves to know if their VPN is actually protecting them.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="page-content">
+
+      <h2>Who We Are</h2>
+      <p>IsMyVPNWorking.com is operated by a team of privacy advocates and developers who believe that online privacy should be accessible to everyone — not just people with technical backgrounds. We are not a VPN company. We are not affiliated with any single VPN provider. We are independent privacy researchers who got frustrated watching people pay for VPN services that were silently failing them.</p>
+      <p>Our team has backgrounds in network security, web development, and digital rights advocacy. We have spent years testing VPN services, reading audit reports, and studying how different types of VPN leaks occur in real-world browser environments. This tool is the result of that work, packaged into something anyone can use in seconds.</p>
+
+      <h2>Why We Built This</h2>
+      <p>The problem we kept encountering was deceptively simple: most people who use VPNs have no easy way to verify they are actually working. VPN apps display a "connected" status, but that green light does not mean your real IP address is hidden, your DNS requests are private, or that WebRTC is not broadcasting your location to every website you visit.</p>
+      <p>We have personally seen cases where people were using paid, reputable VPN services and still exposing their real IP address due to WebRTC leaks. We have seen DNS leaks on devices that showed "VPN connected" for months. The gap between what VPN apps promise and what they actually deliver can be significant — and most users never find out.</p>
+      <p>IsMyVPNWorking.com gives anyone a fast, honest answer in plain English. No technical knowledge required. No account needed. Completely free.</p>
+
+      <h2>Our Testing Methodology</h2>
+      <p>When you load our tool, we run three simultaneous checks using publicly available, privacy-respecting APIs:</p>
+      <ul>
+        <li><strong>IP Address Check:</strong> We query your public IP address and cross-reference it against known VPN server ranges, data centre IP blocks, and proxy detection databases. If your IP belongs to a VPN provider or hosting company rather than a consumer ISP, this strongly indicates a VPN is active.</li>
+        <li><strong>DNS Indicator:</strong> We examine the ISP name associated with your detected IP address. If it matches a major consumer internet provider rather than a VPN or privacy-focused service, we flag this as a potential DNS concern and recommend further testing with a dedicated DNS leak tool.</li>
+        <li><strong>WebRTC Leak Detection:</strong> We use your browser's built-in RTCPeerConnection API to attempt to gather local and public IP addresses that browsers can reveal via WebRTC. If the IP disclosed through WebRTC differs from your VPN IP, we flag this as a potential WebRTC leak.</li>
+      </ul>
+      <p>We are transparent about the limitations of browser-based testing. For comprehensive DNS leak testing that requires server-side infrastructure, we recommend using dedicated tools such as ipleak.net in addition to our check. Our tool is designed to be the fastest, most accessible first step — not the only step for users with high-stakes privacy needs.</p>
+
+      <h2>Affiliate Disclosure</h2>
+      <p>To keep this tool free for everyone, we participate in affiliate programmes offered by VPN providers. This means that if you click a link to a VPN provider on our site and make a purchase, we may receive a commission at no additional cost to you.</p>
+      <p>This commercial relationship <strong>does not influence our tool results</strong>. Our VPN detection logic is completely independent of our affiliate relationships. We do not show different results based on which VPN you are using. We do not recommend VPN providers based on commission rates alone.</p>
+      <p>We only list VPN providers in our recommendations section that have:</p>
+      <ul>
+        <li>Been independently audited for their no-logs policies</li>
+        <li>A track record of transparency with their users</li>
+        <li>Genuine technical features that protect against the leak types we test for</li>
+        <li>Been in operation long enough to have established a credible reputation</li>
+      </ul>
+      <p>If a VPN provider we recommend is found to have violated user privacy or misrepresented their security claims, we will remove them from our recommendations regardless of commercial agreements.</p>
+
+      <h2>Privacy Commitment</h2>
+      <p>We do not store your IP address. We do not log your test results. We do not know who you are. Our tool runs entirely in your browser, making API calls to third-party services that we use solely to detect your VPN status — they receive the same information any website you visit would see.</p>
+      <p>Read our full <a href="privacy.html">Privacy Policy</a> for complete details on data handling and third-party services used.</p>
+
+      <div class="cta-box" style="margin-top:2.5rem;">
+        <h3>Test Your VPN Right Now</h3>
+        <p>See in seconds whether your VPN is actually protecting you — free, instant, and no account required.</p>
+        <a href="/" class="btn btn-primary">Run Free VPN Test →</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+          <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
+            <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          IsMyVPNWorking<span class="logo-dot">.com</span>
+        </a>
+        <p class="footer__tagline">Free VPN testing tool. No signup. No tracking.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Affiliate Disclosure</h4>
+        <p class="footer__disclosure">This site contains affiliate links. We may earn a commission at no cost to you. We only recommend VPNs evaluated for security and privacy.</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <p>© 2025 IsMyVPNWorking.com — Made for privacy-conscious internet users worldwide.</p>
+      <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">Affiliate Disclosure</a></p>
+    </div>
+  </div>
+</footer>
+<script src="js/vpncheck.js"></script>
+</body>
+</html>
