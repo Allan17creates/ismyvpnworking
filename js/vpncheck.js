@@ -238,10 +238,9 @@ function renderWarning(data) {
       Your identity is exposed
     </span>
     <br>
-    <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK -->
-       rel="sponsored noopener" target="_blank" class="btn btn-danger">
-      Protect Yourself Now →
-    </a>
+    <button onclick="document.getElementById('vpns-heading').scrollIntoView({behavior:'smooth'})" class="btn btn-danger">
+      View Trusted VPNs →
+    </button>
   `;
 }
 
