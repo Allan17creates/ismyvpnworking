@@ -18,11 +18,11 @@
   <meta property="og:description" content="DNS leaks are the most overlooked VPN vulnerability. Learn what they are, how to test for them, and how to fix them.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.ismyvpnworking.app/blog/what-is-dns-leak.html">
-  <meta property="og:site_name" content="IsMyVPNWorking.com">
+  <meta property="og:site_name" content="IsMyVPNWorking.app">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="What is a DNS Leak and Why It Means Your VPN is Useless">
   <meta name="twitter:description" content="DNS leaks are the most overlooked VPN vulnerability. Learn what they are, how to test for them, and how to fix them.">
-  <title>What is a DNS Leak? Why Your VPN May Be Useless | IsMyVPNWorking.com</title>
+  <title>What is a DNS Leak? Why Your VPN May Be Useless | IsMyVPNWorking.app</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,12 +34,12 @@
 <header>
   <nav class="nav" aria-label="Main navigation">
     <div class="container nav__inner">
-      <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+      <a href="/" class="nav__logo" aria-label="IMVW home">
         <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
           <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
           <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        IsMyVPNWorking<span class="logo-dot">.com</span>
+        <span style="color:#fff">I</span><span style="color:#2563EB">M</span><span style="color:#fff">V</span><span style="color:#2563EB">W</span>
       </a>
       <ul class="nav__links">
         <li><a href="/">Home</a></li>
@@ -78,19 +78,19 @@
     <div class="blog-layout">
       <article class="article-body">
 
-        <p>You have a VPN. Your IP address is hidden. You feel protected. But your Internet Service Provider can still see every website you visit. This is the reality for millions of VPN users who suffer from DNS leaks — the most common and most overlooked form of VPN failure. Understanding what a DNS leak is, and how to detect and fix one, could mean the difference between genuine privacy and a very expensive illusion of it.</p>
+        <p>You have a VPN. Your IP address is hidden. You feel protected. But your Internet Service Provider can still see every website you visit. This is the reality for millions of VPN users who suffer from DNS leaks, the most common and most overlooked form of VPN failure. Understanding what a DNS leak is, and how to detect and fix one, could mean the difference between genuine privacy and a very expensive illusion of it.</p>
 
         <h2>What is DNS? A Simple Explanation</h2>
-        <p>DNS stands for Domain Name System. Think of it as the internet's phone book. When you type "bbc.co.uk" or "nytimes.com" into your browser, your device does not inherently know the IP address of that website's server. It needs to look it up — and it does this by sending a query to a DNS server, which returns the corresponding IP address.</p>
-        <p>By default, your device uses the DNS servers provided by your Internet Service Provider. This means that every domain name you look up — every website you visit — generates a query that goes to your ISP's servers. Your ISP keeps a record of these queries. Even if you switch to HTTPS and encrypt your actual web traffic, your ISP can still build a detailed log of every website you visit just from your DNS queries.</p>
+        <p>DNS stands for Domain Name System. Think of it as the internet's phone book. When you type "bbc.co.uk" or "nytimes.com" into your browser, your device does not inherently know the IP address of that website's server. It needs to look it up, and it does this by sending a query to a DNS server, which returns the corresponding IP address.</p>
+        <p>By default, your device uses the DNS servers provided by your Internet Service Provider. This means that every domain name you look up, every website you visit, generates a query that goes to your ISP's servers. Your ISP keeps a record of these queries. Even if you switch to HTTPS and encrypt your actual web traffic, your ISP can still build a detailed log of every website you visit just from your DNS queries.</p>
 
         <h2>What is a DNS Leak?</h2>
-        <p>When you use a VPN, all your internet traffic — including DNS queries — should travel through the encrypted VPN tunnel to the VPN provider's DNS servers. From your ISP's perspective, they should see only that you are connected to a VPN server. They should not be able to see your DNS queries.</p>
-        <p>A DNS leak occurs when this fails. Your encrypted VPN tunnel is active, your IP address is successfully masked — but your DNS queries are still travelling outside the tunnel, going directly to your ISP's DNS servers. The result is catastrophic for your privacy: your ISP can see every website you visit despite your VPN appearing to work perfectly. The VPN app shows "connected." The leak is completely invisible to the user.</p>
+        <p>When you use a VPN, all your internet traffic, including DNS queries, should travel through the encrypted VPN tunnel to the VPN provider's DNS servers. From your ISP's perspective, they should see only that you are connected to a VPN server. They should not be able to see your DNS queries.</p>
+        <p>A DNS leak occurs when this fails. Your encrypted VPN tunnel is active, your IP address is successfully masked, but your DNS queries are still travelling outside the tunnel, going directly to your ISP's DNS servers. The result is catastrophic for your privacy: your ISP can see every website you visit despite your VPN appearing to work perfectly. The VPN app shows "connected." The leak is completely invisible to the user.</p>
 
         <div class="cta-box">
           <h3>Check for DNS Leaks Right Now</h3>
-          <p>Our free tool checks your DNS status automatically — results in seconds.</p>
+          <p>Our free tool checks your DNS status automatically, results in seconds.</p>
           <a href="/" class="btn btn-primary">Run VPN Test →</a>
         </div>
 
@@ -98,7 +98,7 @@
         <p>DNS leaks are surprisingly common and occur for several technical reasons:</p>
 
         <h3>Operating System DNS Handling</h3>
-        <p>Windows, macOS, iOS, and Android all handle DNS in different ways, and not all of them automatically route DNS through a VPN tunnel. Windows in particular has a feature called "Smart Multi-Homed Name Resolution" which can send DNS queries to multiple network interfaces simultaneously — including your ISP's interface — in the name of speed and reliability. This feature, intended to improve browsing performance, can completely undermine your VPN's DNS protection.</p>
+        <p>Windows, macOS, iOS, and Android all handle DNS in different ways, and not all of them automatically route DNS through a VPN tunnel. Windows in particular has a feature called "Smart Multi-Homed Name Resolution" which can send DNS queries to multiple network interfaces simultaneously, including your ISP's interface, in the name of speed and reliability. This feature, intended to improve browsing performance, can completely undermine your VPN's DNS protection.</p>
 
         <h3>DHCP-Assigned DNS Servers</h3>
         <p>When your device connects to a network (Wi-Fi or ethernet), it often receives DNS server addresses automatically from the router via DHCP. If your VPN does not override these DNS settings at the network level, your device may continue using the router-assigned (and ISP-provided) DNS servers even after the VPN connects.</p>
@@ -113,10 +113,10 @@
         <p>When a VPN connection drops and reconnects, there is a brief window where your device reverts to using your ISP's DNS. If you do not have a kill switch enabled, both your regular traffic and your DNS queries leak during this gap.</p>
 
         <h2>How to Test for a DNS Leak</h2>
-        <p>Testing for a DNS leak requires a DNS-specific tool because a basic IP check will not reveal it — your IP address can be correctly masked while your DNS is leaking. Here is how to test:</p>
+        <p>Testing for a DNS leak requires a DNS-specific tool because a basic IP check will not reveal it, your IP address can be correctly masked while your DNS is leaking. Here is how to test:</p>
         <ol>
           <li>Connect to your VPN</li>
-          <li>Run our free VPN check tool — it provides a DNS indicator based on your detected ISP</li>
+          <li>Run our free VPN check tool, it provides a DNS indicator based on your detected ISP</li>
           <li>For a more detailed test, visit a dedicated DNS leak tester and run the Extended Test</li>
           <li>Review the results: all DNS servers shown should belong to your VPN provider, not to your home ISP</li>
           <li>If you see server names containing your ISP's domain (such as .comcast.net, .btopenworld.com, .vodafone.co.uk, etc.), you have a confirmed DNS leak</li>
@@ -135,19 +135,19 @@
         <p>On Windows, open Group Policy Editor (gpedit.msc) and navigate to Computer Configuration → Administrative Templates → Network → DNS Client. Set "Turn off smart multi-homed name resolution" to Enabled. This prevents Windows from sending DNS queries to multiple interfaces simultaneously.</p>
 
         <h3>Use a Third-Party Privacy DNS Service</h3>
-        <p>Configure your device to use a privacy-focused DNS resolver such as Cloudflare (1.1.1.1), Quad9 (9.9.9.9), or NextDNS. These will not prevent a DNS leak — your DNS queries will still travel outside the VPN tunnel — but they will at least ensure they are not going to your ISP's servers, significantly reducing the privacy impact.</p>
+        <p>Configure your device to use a privacy-focused DNS resolver such as Cloudflare (1.1.1.1), Quad9 (9.9.9.9), or NextDNS. These will not prevent a DNS leak, your DNS queries will still travel outside the VPN tunnel, but they will at least ensure they are not going to your ISP's servers, significantly reducing the privacy impact.</p>
 
         <h3>Switch to a VPN With Strong DNS Leak Protection</h3>
         <p>If your current VPN continues to leak DNS despite enabling protection settings, it may be time to switch providers. The VPNs we recommend have reliable DNS leak protection built into their infrastructure.</p>
 
         <h2>Why DNS Leaks Are the Most Dangerous VPN Failure</h2>
-        <p>Of all the ways a VPN can fail, DNS leaks are uniquely dangerous because they are completely invisible. With an IP leak, you can visually verify that the wrong IP is being shown. A DNS leak produces no visible symptom — your browsing continues normally, the VPN app shows connected, and your privacy is compromised without any indication that something is wrong.</p>
-        <p>For users who rely on a VPN to prevent their ISP from monitoring their browsing — which is one of the most common reasons people use VPNs — a DNS leak renders the VPN entirely useless for that specific purpose. Your ISP still has a complete record of every website you visit.</p>
+        <p>Of all the ways a VPN can fail, DNS leaks are uniquely dangerous because they are completely invisible. With an IP leak, you can visually verify that the wrong IP is being shown. A DNS leak produces no visible symptom, your browsing continues normally, the VPN app shows connected, and your privacy is compromised without any indication that something is wrong.</p>
+        <p>For users who rely on a VPN to prevent their ISP from monitoring their browsing, which is one of the most common reasons people use VPNs, a DNS leak renders the VPN entirely useless for that specific purpose. Your ISP still has a complete record of every website you visit.</p>
 
         <div class="ad-container" aria-label="Advertisement"><p class="ad-label">Advertisement</p><!-- INSERT ADSENSE CODE HERE --></div>
 
         <div class="cta-box">
-          <h3>Test for DNS Leaks Now — Free</h3>
+          <h3>Test for DNS Leaks Now, Free</h3>
           <p>Our tool checks your DNS status automatically and tells you if you are at risk.</p>
           <a href="/" class="btn btn-primary">Run Free VPN Test →</a>
         </div>
@@ -170,7 +170,7 @@
           <div class="vpn-card">
             <div class="vpn-card__header"><span class="vpn-card__name">ProtonVPN</span><span class="vpn-badge">Open Source</span></div>
             <div class="vpn-card__stars">★★★★½</div>
-            <ul class="vpn-card__features"><li>DNS leak prevention configurable</li><li>Open-source apps — fully auditable</li><li>Swiss jurisdiction</li></ul>
+            <ul class="vpn-card__features"><li>DNS leak prevention configurable</li><li>Open-source apps, fully auditable</li><li>Swiss jurisdiction</li></ul>
             <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK --> rel="sponsored noopener" target="_blank" class="btn btn-primary">Get ProtonVPN</a>
           </div>
         </div>
@@ -198,7 +198,7 @@
       <aside class="blog-sidebar">
         <div class="sidebar-card">
           <h4>Test Your VPN Now</h4>
-          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Free instant check — no account needed.</p>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Free instant check, no account needed.</p>
           <a href="/" class="btn btn-primary" style="width:100%; text-align:center;">Run VPN Test →</a>
         </div>
         <div class="sidebar-card">
@@ -220,12 +220,12 @@
   <div class="container">
     <div class="footer__main">
       <div class="footer__brand">
-        <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+        <a href="/" class="nav__logo" aria-label="IMVW home">
           <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
             <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
             <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          IsMyVPNWorking<span class="logo-dot">.com</span>
+          <span style="color:#fff">I</span><span style="color:#2563EB">M</span><span style="color:#fff">V</span><span style="color:#2563EB">W</span>
         </a>
         <p class="footer__tagline">Free VPN testing tool. No signup. No tracking.</p>
       </div>
@@ -245,7 +245,7 @@
       </div>
     </div>
     <div class="footer__bar">
-      <p>© 2025 IsMyVPNWorking.com — Made for privacy-conscious internet users worldwide.</p>
+      <p>© 2025 IsMyVPNWorking.app, Made for privacy-conscious internet users worldwide.</p>
       <p><a href="../privacy.html">Privacy Policy</a> · <a href="../about.html">Affiliate Disclosure</a></p>
     </div>
   </div>

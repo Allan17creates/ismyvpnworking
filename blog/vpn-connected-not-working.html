@@ -11,18 +11,18 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Why your VPN says connected but your data is still exposed. Split tunnelling, WebRTC bypass, IPv6 leaks, DNS fallback — and how to fix each one.">
+  <meta name="description" content="Why your VPN says connected but your data is still exposed. Split tunnelling, WebRTC bypass, IPv6 leaks, DNS fallback, and how to fix each one.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.ismyvpnworking.app/blog/vpn-connected-not-working.html">
   <meta property="og:title" content="Why Your VPN Says Connected But Your Data is Still Exposed">
-  <meta property="og:description" content="Technical reasons a VPN shows connected but leaks — split tunnelling, WebRTC bypass, IPv6, DNS fallback. How to fix each one.">
+  <meta property="og:description" content="Technical reasons a VPN shows connected but leaks, split tunnelling, WebRTC bypass, IPv6, DNS fallback. How to fix each one.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.ismyvpnworking.app/blog/vpn-connected-not-working.html">
-  <meta property="og:site_name" content="IsMyVPNWorking.com">
+  <meta property="og:site_name" content="IsMyVPNWorking.app">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Why Your VPN Says Connected But Your Data is Still Exposed">
-  <meta name="twitter:description" content="Technical reasons a VPN shows connected but leaks data — and how to fix each one.">
-  <title>VPN Says Connected But Data Still Exposed? Here's Why | IsMyVPNWorking.com</title>
+  <meta name="twitter:description" content="Technical reasons a VPN shows connected but leaks data, and how to fix each one.">
+  <title>VPN Says Connected But Data Still Exposed? Here's Why | IsMyVPNWorking.app</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,12 +34,12 @@
 <header>
   <nav class="nav" aria-label="Main navigation">
     <div class="container nav__inner">
-      <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+      <a href="/" class="nav__logo" aria-label="IMVW home">
         <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
           <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
           <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        IsMyVPNWorking<span class="logo-dot">.com</span>
+        <span style="color:#fff">I</span><span style="color:#2563EB">M</span><span style="color:#fff">V</span><span style="color:#2563EB">W</span>
       </a>
       <ul class="nav__links">
         <li><a href="/">Home</a></li>
@@ -78,41 +78,41 @@
     <div class="blog-layout">
       <article class="article-body">
 
-        <p>The green "connected" indicator in your VPN app means one thing and one thing only: a VPN tunnel has been established between your device and the VPN server. It does not mean all your traffic is protected. It does not mean no data is leaking. And it definitely does not mean you can stop thinking about your privacy. Here are the six most common technical reasons a VPN shows connected while your data remains exposed — and exactly how to fix each one.</p>
+        <p>The green "connected" indicator in your VPN app means one thing and one thing only: a VPN tunnel has been established between your device and the VPN server. It does not mean all your traffic is protected. It does not mean no data is leaking. And it definitely does not mean you can stop thinking about your privacy. Here are the six most common technical reasons a VPN shows connected while your data remains exposed, and exactly how to fix each one.</p>
 
         <h2>Reason 1: Split Tunnelling is Enabled</h2>
-        <p>Split tunnelling is a VPN feature that intentionally routes some of your traffic outside the VPN tunnel. It is designed for convenience — for example, routing your banking app through the VPN while letting Netflix use your direct connection for better streaming speed. The problem arises when split tunnelling is enabled accidentally, configured too broadly, or when you forget it is active.</p>
-        <p>If split tunnelling is set to exclude your browser, your entire web browsing activity travels unprotected. Your ISP sees everything. The VPN app reports connected because it is — just not for the traffic you think it is protecting.</p>
+        <p>Split tunnelling is a VPN feature that intentionally routes some of your traffic outside the VPN tunnel. It is designed for convenience, for example, routing your banking app through the VPN while letting Netflix use your direct connection for better streaming speed. The problem arises when split tunnelling is enabled accidentally, configured too broadly, or when you forget it is active.</p>
+        <p>If split tunnelling is set to exclude your browser, your entire web browsing activity travels unprotected. Your ISP sees everything. The VPN app reports connected because it is, just not for the traffic you think it is protecting.</p>
         <p><strong>Fix:</strong> Open your VPN app settings and locate the split tunnelling or per-app VPN configuration. Either disable split tunnelling entirely or review every application listed to ensure your browser and other sensitive apps are routed through the VPN, not excluded from it.</p>
 
         <div class="cta-box">
           <h3>Check if Your VPN is Actually Protecting You</h3>
-          <p>Our free tool detects what is actually leaking — not what your app claims.</p>
+          <p>Our free tool detects what is actually leaking, not what your app claims.</p>
           <a href="/" class="btn btn-primary">Run VPN Test →</a>
         </div>
 
         <h2>Reason 2: WebRTC is Bypassing the VPN Tunnel</h2>
-        <p>WebRTC (Web Real-Time Communication) is a browser API used for video calls, voice calls, and peer-to-peer data sharing. It was designed to establish direct connections between browsers, and to do this it uses a technique called ICE (Interactive Connectivity Establishment) that can discover and expose your real IP address — including your local network IP and your public IP — regardless of your VPN tunnel.</p>
+        <p>WebRTC (Web Real-Time Communication) is a browser API used for video calls, voice calls, and peer-to-peer data sharing. It was designed to establish direct connections between browsers, and to do this it uses a technique called ICE (Interactive Connectivity Establishment) that can discover and expose your real IP address, including your local network IP and your public IP, regardless of your VPN tunnel.</p>
         <p>A WebRTC leak means websites can query your browser's WebRTC implementation and receive your real IP address back, even though all other traffic is going through the VPN. This is browser-level and completely bypasses the VPN's IP masking.</p>
         <p><strong>Fix:</strong> Install the uBlock Origin browser extension. In its settings, enable "Prevent WebRTC from leaking local IP address." In Firefox, navigate to about:config and set <code>media.peerconnection.enabled</code> to false. In Chromium-based browsers, consider using extensions specifically designed for WebRTC control.</p>
 
         <h2>Reason 3: IPv6 Traffic is Not Covered</h2>
-        <p>The internet is in the middle of a long transition from IPv4 (the older addressing system, e.g., 192.168.1.1) to IPv6 (the newer system with much larger addresses, e.g., 2001:db8::1). Many VPNs were built primarily for IPv4 and do not properly handle IPv6 traffic. If your network connection uses IPv6 — and increasingly, most modern connections do — your IPv6 traffic may travel completely outside the VPN tunnel.</p>
-        <p>Websites that support IPv6 will receive your real IPv6 address instead of the VPN's address, directly identifying you. Your ISP can also see this IPv6 traffic. The VPN reports connected because its IPv4 tunnel is working — it simply does not handle IPv6.</p>
+        <p>The internet is in the middle of a long transition from IPv4 (the older addressing system, e.g., 192.168.1.1) to IPv6 (the newer system with much larger addresses, e.g., 2001:db8::1). Many VPNs were built primarily for IPv4 and do not properly handle IPv6 traffic. If your network connection uses IPv6, and increasingly, most modern connections do, your IPv6 traffic may travel completely outside the VPN tunnel.</p>
+        <p>Websites that support IPv6 will receive your real IPv6 address instead of the VPN's address, directly identifying you. Your ISP can also see this IPv6 traffic. The VPN reports connected because its IPv4 tunnel is working, it simply does not handle IPv6.</p>
         <p><strong>Fix:</strong> Check your VPN app settings for "IPv6 leak protection" and enable it. Most reputable VPNs now include this. Alternatively, you can disable IPv6 at the operating system level: on Windows, go to Network Adapter settings → Properties and uncheck "Internet Protocol Version 6." On macOS, go to System Preferences → Network → Advanced → TCP/IP and set "Configure IPv6" to Off.</p>
 
         <h2>Reason 4: DNS Fallback to ISP Servers</h2>
-        <p>When a VPN connection has a brief interruption or instability, some operating systems and VPN clients fall back to the system's default DNS configuration — typically your ISP's DNS servers. This DNS fallback can happen in milliseconds, making it invisible to the user, but during that window your DNS queries are exposed to your ISP.</p>
+        <p>When a VPN connection has a brief interruption or instability, some operating systems and VPN clients fall back to the system's default DNS configuration, typically your ISP's DNS servers. This DNS fallback can happen in milliseconds, making it invisible to the user, but during that window your DNS queries are exposed to your ISP.</p>
         <p>More persistently, some VPN configurations simply do not override your device's DNS settings at all. Your device continues using whatever DNS servers were configured before the VPN connected, which in most cases means your ISP's servers.</p>
         <p><strong>Fix:</strong> Enable DNS leak protection in your VPN settings. Additionally, manually configure your device's network adapter to use privacy-respecting DNS servers (1.1.1.1 for Cloudflare or 9.9.9.9 for Quad9) as a fallback. This ensures that even during brief VPN interruptions, your DNS queries do not go to your ISP.</p>
 
         <h2>Reason 5: The Kill Switch is Disabled</h2>
-        <p>A VPN kill switch is a feature that cuts off all internet access if the VPN connection drops unexpectedly. Without it, there is a gap between when the VPN disconnects and when it reconnects during which all your traffic — including your IP address and DNS queries — is exposed in plain sight. On an unstable connection or when a VPN server is under load, these gaps can happen multiple times per session.</p>
+        <p>A VPN kill switch is a feature that cuts off all internet access if the VPN connection drops unexpectedly. Without it, there is a gap between when the VPN disconnects and when it reconnects during which all your traffic, including your IP address and DNS queries, is exposed in plain sight. On an unstable connection or when a VPN server is under load, these gaps can happen multiple times per session.</p>
         <p>Many VPN apps have a kill switch feature but ship with it disabled by default because it creates a more disruptive user experience when the VPN drops. Users often do not realise it is there.</p>
         <p><strong>Fix:</strong> Find the kill switch option in your VPN app settings (it may be called "Network Lock," "Internet Kill Switch," or "Always-on VPN" depending on the provider) and enable it. On mobile, use your operating system's "Always-on VPN" setting combined with "Block connections without VPN" for the strongest protection.</p>
 
         <h2>Reason 6: The VPN Protocol is Misconfigured or Falling Back to an Insecure Mode</h2>
-        <p>Modern VPNs support multiple protocols — OpenVPN, WireGuard, IKEv2, Lightway, and others. Some VPN clients automatically select the "best" protocol, which can mean falling back to older or less secure configurations when network conditions are challenging. In rare cases, a protocol configuration error can result in the VPN tunnel being established but not properly encrypting all traffic.</p>
+        <p>Modern VPNs support multiple protocols, OpenVPN, WireGuard, IKEv2, Lightway, and others. Some VPN clients automatically select the "best" protocol, which can mean falling back to older or less secure configurations when network conditions are challenging. In rare cases, a protocol configuration error can result in the VPN tunnel being established but not properly encrypting all traffic.</p>
         <p>Additionally, some VPN apps have a "stealth" or "obfuscation" mode that modifies how the VPN tunnel works to bypass VPN blocking. If this mode is activated incorrectly on a network that does not require it, it can sometimes reduce the tunnel's effectiveness.</p>
         <p><strong>Fix:</strong> In your VPN app, manually select a specific protocol rather than using "automatic." WireGuard and OpenVPN (UDP) are generally the most reliable choices for both security and performance. Disable obfuscation modes unless you are on a network that actively blocks VPN traffic.</p>
 
@@ -123,7 +123,7 @@
 
         <div class="cta-box">
           <h3>Diagnose Your VPN Right Now</h3>
-          <p>Free, instant, no account — see exactly what is leaking in seconds.</p>
+          <p>Free, instant, no account, see exactly what is leaking in seconds.</p>
           <a href="/" class="btn btn-primary">Run Free VPN Test →</a>
         </div>
 
@@ -145,7 +145,7 @@
           <div class="vpn-card">
             <div class="vpn-card__header"><span class="vpn-card__name">PIA</span><span class="vpn-badge">Open Source</span></div>
             <div class="vpn-card__stars">★★★★☆</div>
-            <ul class="vpn-card__features"><li>Open-source apps — auditable</li><li>VPN kill switch included</li><li>Advanced split tunnelling</li></ul>
+            <ul class="vpn-card__features"><li>Open-source apps, auditable</li><li>VPN kill switch included</li><li>Advanced split tunnelling</li></ul>
             <a href="#vpn-affiliate-link" <!-- REPLACE WITH YOUR AFFILIATE LINK --> rel="sponsored noopener" target="_blank" class="btn btn-primary">Get PIA</a>
           </div>
         </div>
@@ -173,7 +173,7 @@
       <aside class="blog-sidebar">
         <div class="sidebar-card">
           <h4>Test Your VPN Now</h4>
-          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Free instant check — no account needed.</p>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Free instant check, no account needed.</p>
           <a href="/" class="btn btn-primary" style="width:100%; text-align:center;">Run VPN Test →</a>
         </div>
         <div class="sidebar-card">
@@ -195,12 +195,12 @@
   <div class="container">
     <div class="footer__main">
       <div class="footer__brand">
-        <a href="/" class="nav__logo" aria-label="IsMyVPNWorking.com home">
+        <a href="/" class="nav__logo" aria-label="IMVW home">
           <svg class="logo-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true">
             <path d="M14 2L3 7.5v7C3 20.1 7.9 26 14 27.5 20.1 26 25 20.1 25 14.5v-7L14 2z" fill="rgba(0,212,170,0.15)" stroke="#00D4AA" stroke-width="1.5"/>
             <path d="M10 14l3 3 5-5" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          IsMyVPNWorking<span class="logo-dot">.com</span>
+          <span style="color:#fff">I</span><span style="color:#2563EB">M</span><span style="color:#fff">V</span><span style="color:#2563EB">W</span>
         </a>
         <p class="footer__tagline">Free VPN testing tool. No signup. No tracking.</p>
       </div>
@@ -220,7 +220,7 @@
       </div>
     </div>
     <div class="footer__bar">
-      <p>© 2025 IsMyVPNWorking.com — Made for privacy-conscious internet users worldwide.</p>
+      <p>© 2025 IsMyVPNWorking.app, Made for privacy-conscious internet users worldwide.</p>
       <p><a href="../privacy.html">Privacy Policy</a> · <a href="../about.html">Affiliate Disclosure</a></p>
     </div>
   </div>
