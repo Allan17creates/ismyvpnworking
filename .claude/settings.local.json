@@ -9,7 +9,21 @@
       "Bash(git commit *)",
       "Bash(git remote *)",
       "Bash(git push *)",
-      "Bash(python -)"
+      "Bash(python -)",
+      "Bash(py --version)",
+      "Bash(py -c ' *)",
+      "Bash(git -C \"D:/ismyvpnworking\" status)",
+      "Bash(git -C \"D:/ismyvpnworking\" remote -v)",
+      "Bash(git -C \"D:/ismyvpnworking\" add blog.html blog/ index.html)",
+      "Bash(git -C D:/ismyvpnworking commit -m ' *)",
+      "Bash(git -C \"D:/ismyvpnworking\" stash)",
+      "Bash(git -C \"D:/ismyvpnworking\" pull --rebase origin main)",
+      "Bash(git -C \"D:/ismyvpnworking\" stash pop)",
+      "Bash(git -C \"D:/ismyvpnworking\" push origin main)",
+      "Bash(git -C \"D:/ismyvpnworking\" add images/logo.png.png blog/ about.html blog.html contact.html index.html privacy.html 404.html)",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(git -C \"D:/ismyvpnworking\" add ads.txt)"
     ]
   }
 }
