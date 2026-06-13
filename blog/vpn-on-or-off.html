@@ -66,6 +66,7 @@
       <div class="blog-hero__meta">
         <span class="tag">VPN Basics</span>
         <span class="read-time">5 min read</span>
+        <span class="read-time">Updated: June 2025</span>
       </div>
       <h1>Should You Keep Your VPN On or Off? The Honest Answer</h1>
     </div>
@@ -89,6 +90,15 @@
       <article class="article-body">
 
         <p>The question of whether to keep your VPN on all the time or only turn it on when you need it comes up constantly. The short answer is that keeping it on all the time is generally the better choice, but there are a few situations where turning it off makes sense. This guide explains the reasoning behind both, so you can make the right call for your specific situation.</p>
+        <div class="cta-box" style="background:var(--surface-2,#1e2535); border-left:4px solid var(--accent-green,#00D4AA); margin-bottom:2rem;">
+          <h3 style="margin-top:0;">What You Will Learn</h3>
+          <ul style="margin:0.5rem 0 0 0; padding-left:1.2rem;">
+              <li>When leaving your VPN on all the time makes sense</li>
+              <li>Situations where turning your VPN off is reasonable</li>
+              <li>How always-on VPN affects your battery and speed</li>
+              <li>How to decide the right VPN usage pattern for your needs</li>
+          </ul>
+        </div>
 
         <h2>What Happens When Your VPN Is On</h2>
         <p>When your VPN is active, all internet traffic from your device travels through an encrypted tunnel to the VPN server before reaching its destination. Websites see the VPN server's IP address instead of yours. Your internet provider sees that you are connected to a VPN but cannot see what you are doing or which sites you visit. Anyone on the same network as you cannot read your traffic.</p>
@@ -136,6 +146,56 @@
 
         <h2>How to Know If Your Always-On VPN Is Actually Working</h2>
         <p>Keeping your VPN on all the time only helps if it is working correctly. DNS leaks, WebRTC leaks, and protocol failures can all cause your VPN to appear connected while leaking your real information. Run our free check periodically to confirm everything is still working correctly, especially after VPN app updates or device restarts.</p>
+
+        
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-0">
+              Should I leave my VPN on all the time?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-0">
+              <p>For most users, leaving a VPN on all the time provides the best protection without significant downsides. Modern VPN protocols like WireGuard have minimal battery and speed impact. The main reasons to turn a VPN off are when accessing services that block VPN traffic, when you need maximum speed for gaming, or when using trusted private networks.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-1">
+              Does leaving a VPN on all the time drain my battery?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-1">
+              <p>Older VPN protocols like OpenVPN do consume noticeable battery. Newer protocols like WireGuard and IKEv2 are far more efficient and have minimal battery impact on modern devices. If battery is a concern, choose a VPN that uses WireGuard by default, such as NordVPN or Mullvad.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-2">
+              Will a VPN slow down my internet if I leave it on permanently?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-2">
+              <p>A well-optimised VPN on a fast connection causes 10-20% speed reduction at most, which is unnoticeable for most tasks. The impact is more noticeable if you connect to a server far from your location. For activities where maximum speed is critical, connecting to the closest available server minimises the impact.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-3">
+              Should I turn off my VPN for online banking?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-3">
+              <p>Some banking websites flag VPN connections as suspicious and may block access or trigger additional authentication steps. If this happens, you can temporarily disable your VPN to access your bank. The risk on your home connection is relatively low. On public Wi-Fi, however, always use a VPN for banking regardless of any friction it causes.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-4">
+              Does my VPN need to be on for it to protect me?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-4">
+              <p>Yes. A VPN only protects traffic that passes through it while it is connected. Any browsing or data transfer that happens when the VPN is off is completely unprotected. This is why many security professionals recommend always-on VPN combined with a kill switch, so there is never a moment where your traffic is unprotected without your knowledge.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="ad-container" aria-label="Advertisement"><p class="ad-label">Advertisement</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6491893479956999"
      crossorigin="anonymous"></script>

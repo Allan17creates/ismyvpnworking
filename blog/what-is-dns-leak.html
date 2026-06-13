@@ -86,6 +86,15 @@
       <article class="article-body">
 
         <p>You have a VPN. Your IP address is hidden. You feel protected. But your Internet Service Provider can still see every website you visit. This is the reality for millions of VPN users who suffer from DNS leaks, the most common and most overlooked form of VPN failure. Understanding what a DNS leak is, and how to detect and fix one, could mean the difference between genuine privacy and a very expensive illusion of it.</p>
+        <div class="cta-box" style="background:var(--surface-2,#1e2535); border-left:4px solid var(--accent-green,#00D4AA); margin-bottom:2rem;">
+          <h3 style="margin-top:0;">What You Will Learn</h3>
+          <ul style="margin:0.5rem 0 0 0; padding-left:1.2rem;">
+              <li>What DNS is and why it matters for your privacy</li>
+              <li>How a DNS leak exposes your browsing to your ISP even with a VPN</li>
+              <li>How to test whether your VPN has a DNS leak right now</li>
+              <li>How to fix a DNS leak on any VPN or device</li>
+          </ul>
+        </div>
 
         <h2>What is DNS? A Simple Explanation</h2>
         <p>DNS stands for Domain Name System. Think of it as the internet's phone book. When you type "bbc.co.uk" or "nytimes.com" into your browser, your device does not inherently know the IP address of that website's server. It needs to look it up, and it does this by sending a query to a DNS server, which returns the corresponding IP address.</p>
@@ -150,6 +159,65 @@
         <h2>Why DNS Leaks Are the Most Dangerous VPN Failure</h2>
         <p>Of all the ways a VPN can fail, DNS leaks are uniquely dangerous because they are completely invisible. With an IP leak, you can visually verify that the wrong IP is being shown. A DNS leak produces no visible symptom, your browsing continues normally, the VPN app shows connected, and your privacy is compromised without any indication that something is wrong.</p>
         <p>For users who rely on a VPN to prevent their ISP from monitoring their browsing, which is one of the most common reasons people use VPNs, a DNS leak renders the VPN entirely useless for that specific purpose. Your ISP still has a complete record of every website you visit.</p>
+
+        
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-0">
+              What exactly is a DNS leak?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-0">
+              <p>A DNS leak happens when your device sends DNS queries to your ISP's DNS servers instead of routing them through your VPN's encrypted tunnel. Your VPN may be hiding your IP address correctly, but your ISP can still see every domain name you visit because the DNS requests bypass the VPN. It is like whispering your destination to the VPN but shouting your shopping list to your neighbour.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-1">
+              How does a DNS leak happen?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-1">
+              <p>DNS leaks commonly occur when your operating system has DNS servers configured that take priority over the VPN's DNS settings, when your VPN app does not properly override system DNS settings, when IPv6 DNS requests are not covered by the VPN tunnel, or when some ISP-provided routers intercept and redirect DNS traffic regardless of your VPN.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-2">
+              Will a DNS leak reveal my browsing history?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-2">
+              <p>A DNS leak reveals the domain names of every website you visit to whoever runs the DNS server — typically your ISP. They can see that you visited a particular site even if the specific page content is encrypted. This is enough to build a detailed picture of your browsing habits. Many ISPs in various countries are legally required to retain this data for months or years.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-3">
+              How do I fix a DNS leak on my VPN?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-3">
+              <p>First, enable DNS leak protection in your VPN app settings — most reputable providers have this option. Second, manually configure your DNS servers to a privacy-respecting provider like Cloudflare (1.1.1.1) or Quad9 (9.9.9.9) as a backup layer. If leaks persist, contact your VPN provider support or consider switching to NordVPN or ProtonVPN, which both handle DNS routing robustly by default.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-4">
+              Does HTTPS protect me from DNS leaks?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-4">
+              <p>No. HTTPS encrypts the content of your connection to a website, but it does not hide the fact that you are connecting to that website in the first place. DNS lookups happen before the HTTPS connection is established. DNS over HTTPS is a newer protocol that does encrypt DNS queries, but it needs to be specifically enabled and does not replace VPN-level DNS protection.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-5">
+              Which VPNs have the best DNS leak protection?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-5">
+              <p>NordVPN and ProtonVPN both run their own DNS servers on every VPN node and enable DNS leak protection by default. ExpressVPN uses private encrypted DNS on all servers. When evaluating any VPN, check whether they operate their own DNS servers or rely on third-party DNS providers, since third-party DNS creates an additional point of potential exposure.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="ad-container" aria-label="Advertisement"><p class="ad-label">Advertisement</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6491893479956999"
      crossorigin="anonymous"></script>

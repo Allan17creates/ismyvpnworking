@@ -86,6 +86,15 @@
       <article class="article-body">
 
         <p>Paying for a VPN and trusting it to work without verification is like buying a lock and never testing whether the key actually turns. VPN testing should be a routine part of using any privacy tool, and fortunately every method described here is completely free. These five approaches cover different types of VPN failures, from basic IP exposure to subtle DNS leaks, and together they give you a complete picture of your VPN's real-world performance.</p>
+        <div class="cta-box" style="background:var(--surface-2,#1e2535); border-left:4px solid var(--accent-green,#00D4AA); margin-bottom:2rem;">
+          <h3 style="margin-top:0;">What You Will Learn</h3>
+          <ul style="margin:0.5rem 0 0 0; padding-left:1.2rem;">
+              <li>Five specific, free methods to verify your VPN is working</li>
+              <li>How to use our tool for an instant automated check</li>
+              <li>How to manually test your IP, DNS, and WebRTC individually</li>
+              <li>How to interpret the results and what to do if you find a leak</li>
+          </ul>
+        </div>
 
         <h2>Method 1: IsMyVPNWorking.app (Fastest, Most Comprehensive)</h2>
         <p>Our free tool runs three simultaneous checks, IP address detection, VPN provider identification, and WebRTC leak detection, and delivers a plain-English result within seconds. It is the fastest way to get a comprehensive overview without needing any technical knowledge.</p>
@@ -165,6 +174,56 @@
           <li><strong>IP address passes but DNS shows your ISP:</strong> You have a DNS leak. Enable "DNS leak protection" in your VPN app settings. If unavailable, consider switching providers.</li>
           <li><strong>WebRTC shows your real IP alongside VPN IP:</strong> Install a browser extension to block WebRTC or disable WebRTC in your browser's advanced settings.</li>
         </ul>
+
+        
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-0">
+              What is the easiest way to test if my VPN is working?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-0">
+              <p>The easiest method is to use our free tool on this site. Load the homepage with your VPN connected, and it automatically checks your IP address, DNS status, and WebRTC leaks in seconds. If all three pass, your VPN is working correctly. If any fail, the results will explain what is leaking and what to do about it.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-1">
+              Can I test my VPN without installing any software?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-1">
+              <p>Yes. You can test your VPN entirely through your web browser without installing anything. IP check sites show your current public IP. DNS leak test sites show which DNS servers your device is using. WebRTC leak test sites use your browser's built-in capabilities to check for IP exposure. Our tool combines all three checks into a single page load.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-2">
+              What should my IP address show when my VPN is working?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-2">
+              <p>When your VPN is connected, your IP address should match the server location you selected in your VPN app. The ISP name associated with that IP should belong to a VPN provider or data centre, not your home internet provider. If you see your home ISP name, your traffic is not routing through the VPN correctly.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-3">
+              How do I test for DNS leaks specifically?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-3">
+              <p>Load a DNS leak test with your VPN connected. You want to see DNS servers belonging to your VPN provider, not your home ISP. If your ISP's DNS servers appear in the results, you have a DNS leak. Enable DNS leak protection in your VPN app settings to fix it.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-4">
+              Should I test my VPN on both desktop and mobile?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-4">
+              <p>Yes. VPN apps behave differently across platforms, and a leak on one device does not mean all your devices are affected. Mobile devices are particularly prone to WebRTC leaks in some browser apps, and connection drops during network switches can temporarily expose your real IP. Test each device separately.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="ad-container" aria-label="Advertisement"><p class="ad-label">Advertisement</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6491893479956999"
      crossorigin="anonymous"></script>

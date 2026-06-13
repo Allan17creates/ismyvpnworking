@@ -86,6 +86,15 @@
       <article class="article-body">
 
         <p>Every device handles VPN connections slightly differently, which means the verification steps, and the common failure modes, vary between platforms. Whether you are checking a VPN on your iPhone, Android phone, Windows laptop, or Mac, this guide gives you exact steps tailored to each platform, along with the most common issues we have seen on each device type and how to resolve them.</p>
+        <div class="cta-box" style="background:var(--surface-2,#1e2535); border-left:4px solid var(--accent-green,#00D4AA); margin-bottom:2rem;">
+          <h3 style="margin-top:0;">What You Will Learn</h3>
+          <ul style="margin:0.5rem 0 0 0; padding-left:1.2rem;">
+              <li>How to verify your VPN is working on iPhone, Android, and Windows</li>
+              <li>Device-specific checks and settings for each platform</li>
+              <li>Why mobile VPN checks are especially important</li>
+              <li>Common platform-specific VPN failures and fixes</li>
+          </ul>
+        </div>
 
         <h2>The Universal First Step: Any Device</h2>
         <p>Regardless of which device you are using, start here: connect your VPN, then open this website (IsMyVPNWorking.app) in your device's browser. Our tool runs automatically and works on every modern browser on every platform. If the result card shows green with a VPN detected, you have basic confirmation the VPN is routing your traffic correctly. If it shows a warning, use the device-specific troubleshooting steps below.</p>
@@ -176,6 +185,56 @@
           <li><strong>VPN disconnecting when Mac sleeps:</strong> Go to your VPN app's settings and enable "Reconnect on wake" or "Auto-reconnect." Most reputable VPN apps support this feature.</li>
           <li><strong>iCloud Private Relay conflicting with VPN:</strong> Apple's iCloud Private Relay (available in iCloud+ subscriptions) can conflict with VPN connections. Disable Private Relay in System Preferences → Apple ID → iCloud → Private Relay when using a VPN.</li>
         </ul>
+
+        
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-0">
+              How do I check if my VPN is working on iPhone?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-0">
+              <p>On iPhone, look for the VPN icon in the status bar. For a proper verification, open Safari or Chrome with your VPN connected and visit our homepage tool. It will show your current IP address and confirm whether DNS and WebRTC are protected. The status bar icon alone only confirms a connection exists, not that it is leak-free.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-1">
+              How do I check if my VPN is working on Android?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-1">
+              <p>On Android, a key icon appears in the notification bar when a VPN is connected. To verify the VPN is actually working, open your browser with the VPN active and run our free test. Also check your VPN app settings to ensure the kill switch is enabled — Android's native kill switch is found in Settings > Network > VPN.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-2">
+              Why does my VPN keep turning off on my iPhone?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-2">
+              <p>iOS aggressively manages background app activity to preserve battery life, which can cause VPN connections to drop. Go to your VPN app's settings and ensure it has permission to run in the background. Also check Settings > VPN on your iPhone and ensure the VPN connection is set to reconnect automatically. Switching to IKEv2 protocol often improves iOS VPN stability.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-3">
+              Does a VPN work differently on mobile vs desktop?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-3">
+              <p>The core function is the same, but mobile devices present additional challenges. They switch networks frequently, which can cause VPN connections to drop without a kill switch. Battery optimisation can kill VPN apps. For comprehensive protection on mobile, ensure your VPN app has a kill switch enabled and is excluded from battery optimisation.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-4">
+              How do I enable the VPN kill switch on Windows?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-4">
+              <p>Most VPN apps for Windows include a kill switch in their settings — look for it under Security, Connection, or Advanced settings. Enable it and test it by manually disconnecting your VPN while browsing and checking whether your internet cuts out temporarily.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="ad-container" aria-label="Advertisement"><p class="ad-label">Advertisement</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6491893479956999"
      crossorigin="anonymous"></script>

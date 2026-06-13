@@ -86,6 +86,15 @@
       <article class="article-body">
 
         <p>The green "connected" indicator in your VPN app means one thing and one thing only: a VPN tunnel has been established between your device and the VPN server. It does not mean all your traffic is protected. It does not mean no data is leaking. And it definitely does not mean you can stop thinking about your privacy. Here are the six most common technical reasons a VPN shows connected while your data remains exposed, and exactly how to fix each one.</p>
+        <div class="cta-box" style="background:var(--surface-2,#1e2535); border-left:4px solid var(--accent-green,#00D4AA); margin-bottom:2rem;">
+          <h3 style="margin-top:0;">What You Will Learn</h3>
+          <ul style="margin:0.5rem 0 0 0; padding-left:1.2rem;">
+              <li>Why a "connected" VPN can still leave your data exposed</li>
+              <li>The four most common reasons a VPN connection fails silently</li>
+              <li>How to diagnose which type of failure you are experiencing</li>
+              <li>Step-by-step fixes for each failure type</li>
+          </ul>
+        </div>
 
         <h2>Reason 1: Split Tunnelling is Enabled</h2>
         <p>Split tunnelling is a VPN feature that intentionally routes some of your traffic outside the VPN tunnel. It is designed for convenience, for example, routing your banking app through the VPN while letting Netflix use your direct connection for better streaming speed. The problem arises when split tunnelling is enabled accidentally, configured too broadly, or when you forget it is active.</p>
@@ -125,6 +134,56 @@
 
         <h2>How to Know Which Problem You Have</h2>
         <p>Run our free VPN check immediately after connecting to your VPN. The results will indicate whether your IP is masked, what your detected ISP is, and whether WebRTC is leaking a different IP. For DNS specifically, use a dedicated DNS leak test tool for the most detailed results. Once you identify the type of leak, apply the corresponding fix above.</p>
+
+        
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-0">
+              Why does my VPN say connected but my IP has not changed?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-0">
+              <p>This usually means the VPN tunnel failed to establish properly despite the app reporting a connected state. Try disconnecting and reconnecting. If your IP still does not change, try a different server location. If the problem persists, restart the VPN app completely, check that no firewall is blocking the VPN protocol, and reinstall the app if necessary.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-1">
+              What causes a VPN split tunnelling issue?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-1">
+              <p>Split tunnelling routes only some of your traffic through the VPN while letting other traffic go directly to the internet. If configured incorrectly or enabled by default without your knowledge, it can leave browsers or certain apps unprotected. Check your VPN app settings for any split tunnelling settings and ensure your browser is included in the protected traffic.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-2">
+              Why is my VPN connected but I cannot access certain websites?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-2">
+              <p>Some websites actively block traffic from known VPN IP ranges. This is common with streaming services, banking websites, and some government services. Try connecting to a different VPN server, as some server IPs are more likely to be blocked than others. If it is a streaming service, look for servers specifically optimised for that platform in your VPN app.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-3">
+              How do I fix VPN connection drops on mobile?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-3">
+              <p>Mobile VPN drops are usually caused by power saving settings killing background apps, network switches between mobile data and Wi-Fi, or unstable server connections. Enable the kill switch in your VPN app to block traffic during drops. Exclude your VPN app from battery optimisation in your phone settings. Try switching to WireGuard protocol if available, as it handles network changes better than older protocols.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-4">
+              Can my VPN be connected but providing no encryption?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-4">
+              <p>This would be unusual with reputable providers, but protocol fallback issues can sometimes cause a VPN to connect using a weaker configuration. More commonly, the issue is incomplete routing where some traffic bypasses the VPN tunnel. Always use a VPN provider that has been independently audited.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="ad-container" aria-label="Advertisement"><p class="ad-label">Advertisement</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6491893479956999"
      crossorigin="anonymous"></script>

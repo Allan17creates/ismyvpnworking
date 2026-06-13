@@ -66,6 +66,7 @@
       <div class="blog-hero__meta">
         <span class="tag">How-to Guide</span>
         <span class="read-time">6 min read</span>
+        <span class="read-time">Updated: June 2025</span>
       </div>
       <h1>How to Know if Your VPN is Actually Working (or Silently Failing You)</h1>
     </div>
@@ -93,6 +94,15 @@
       <article class="article-body">
 
         <p>Millions of people around the world pay for VPN services every month. They install the app, click connect, and trust that a green icon means they are protected. But here is the uncomfortable truth: a VPN showing "connected" in the app does not guarantee your real IP address is hidden, your DNS requests are private, or that your browser is not leaking your location through WebRTC. VPN failures are silent. Your app will not tell you when it is failing. This guide will.</p>
+        <div class="cta-box" style="background:var(--surface-2,#1e2535); border-left:4px solid var(--accent-green,#00D4AA); margin-bottom:2rem;">
+          <h3 style="margin-top:0;">What You Will Learn</h3>
+          <ul style="margin:0.5rem 0 0 0; padding-left:1.2rem;">
+              <li>How to tell if your VPN is truly hiding your IP address</li>
+              <li>The difference between IP leaks, DNS leaks, and WebRTC leaks</li>
+              <li>A step-by-step manual testing process you can run in under 5 minutes</li>
+              <li>Exactly what to do if your VPN fails any of the checks</li>
+          </ul>
+        </div>
 
         <h2>What Does "VPN Working" Actually Mean?</h2>
         <p>When privacy experts say a VPN is "working," they mean three specific things are true simultaneously:</p>
@@ -156,6 +166,65 @@
         <p>Trusting your VPN app's green light is not enough. VPN failures are common, silent, and genuinely dangerous for anyone who relies on their VPN for real privacy. Testing takes less than 30 seconds. Make it a habit.</p>
 
         <!-- ADSENSE AD UNIT -->
+        
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-0">
+              How do I know if my VPN is actually working?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-0">
+              <p>The fastest way is to run an automated check like our free tool on the homepage. It tests your IP address, DNS status, and WebRTC leaks simultaneously in seconds. Manually, you can note your IP before connecting, connect to your VPN, then check your IP again. If it has changed and now shows a VPN server location, your basic IP protection is working.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-1">
+              Can a VPN show "connected" but still be leaking?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-1">
+              <p>Yes. This is one of the most common VPN problems. The app can show a green connected icon while your real IP is being exposed through WebRTC, your DNS requests are going to your ISP instead of through the VPN tunnel, or a partial connection failure routes some traffic outside the VPN. Always verify with a dedicated leak test rather than trusting the app status alone.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-2">
+              What is a WebRTC leak and should I be worried?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-2">
+              <p>WebRTC is a browser technology used for video calls and file sharing. It can bypass your VPN and expose your real IP address directly to websites, even when your VPN is connected. It affects Chrome, Firefox, and Edge users. You can block it using the uBlock Origin browser extension or by disabling WebRTC in your browser settings. It is a real threat worth addressing.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-3">
+              How often should I test my VPN?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-3">
+              <p>Test your VPN every time you connect to a new network, especially public Wi-Fi. Also test after VPN app updates, after your device restarts, and before any session where privacy matters. It takes less than 30 seconds and is worth making a habit.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-4">
+              What should I do if my VPN is leaking my real IP?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-4">
+              <p>First, disconnect and reconnect to a different VPN server. If the leak persists, check your VPN app settings for DNS leak protection and enable it. For WebRTC leaks, install a browser extension to block WebRTC. If the problem continues across multiple servers, contact your VPN provider support or consider switching to a provider with stronger default leak protection like NordVPN or ProtonVPN.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-5">
+              Does using a VPN slow down my internet speed?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-5">
+              <p>All VPNs cause some speed reduction due to encryption overhead and the extra routing distance through the VPN server. A well-optimised VPN like NordVPN using the NordLynx protocol typically reduces speeds by 10-20%, which is barely noticeable for most tasks.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="ad-container" aria-label="Advertisement">
           <p class="ad-label">Advertisement</p>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6491893479956999"

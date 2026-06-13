@@ -66,6 +66,7 @@
       <div class="blog-hero__meta">
         <span class="tag">DNS Leak Test</span>
         <span class="read-time">5 min read</span>
+        <span class="read-time">Updated: June 2025</span>
       </div>
       <h1>DNS Leak Test: What It Is and How to Run One for Free</h1>
     </div>
@@ -89,6 +90,15 @@
       <article class="article-body">
 
         <p>Most people who use a VPN focus on one thing: hiding their IP address. They check that their visible IP has changed, see it has, and assume everything is fine. But there is another type of leak that most VPN users never check for, and it can expose everything they do online without changing their visible IP one bit. It is called a DNS leak, and a simple free test can tell you whether you have one right now.</p>
+        <div class="cta-box" style="background:var(--surface-2,#1e2535); border-left:4px solid var(--accent-green,#00D4AA); margin-bottom:2rem;">
+          <h3 style="margin-top:0;">What You Will Learn</h3>
+          <ul style="margin:0.5rem 0 0 0; padding-left:1.2rem;">
+              <li>What a DNS leak test checks and how to run one</li>
+              <li>How to read DNS leak test results correctly</li>
+              <li>The difference between a passing and failing DNS test</li>
+              <li>Which VPN settings to change if you have a DNS leak</li>
+          </ul>
+        </div>
 
         <h2>What Is DNS in Plain Terms?</h2>
         <p>When you type a website address into your browser, your device needs to find the actual server that hosts that site. It does this by sending a request to a DNS server, which works like a directory that converts names into addresses. Without DNS, your device would not know where to send your request.</p>
@@ -137,6 +147,56 @@
 
         <h2>How Often Should You Test?</h2>
         <p>Run a DNS leak test whenever you update your VPN app, switch to a new network, connect to a VPN for something important, or notice that websites seem to know your real location. It takes under a minute and gives you real confidence that your browsing history stays private.</p>
+
+        
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-0">
+              How do I run a DNS leak test?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-0">
+              <p>The simplest method is to use our homepage tool, which includes DNS checking automatically. With your VPN connected, load the tool and look at the ISP name shown. If it matches your VPN provider rather than your home internet provider, your DNS is routing correctly. For a more detailed breakdown showing exactly which DNS servers are being used, dedicated DNS leak test tools list each server IP and its operator.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-1">
+              What does it mean if my ISP appears in a DNS leak test?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-1">
+              <p>If your home internet provider appears in the DNS test results while your VPN is connected, your DNS queries are bypassing the VPN tunnel and going directly to your ISP's servers. Your ISP can see every domain name you are visiting. This needs to be fixed by enabling DNS leak protection in your VPN settings or manually configuring privacy-respecting DNS servers.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-2">
+              What DNS servers should I see when my VPN is working correctly?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-2">
+              <p>When your VPN is working correctly, you should see DNS servers belonging to your VPN provider or a privacy-respecting service like Cloudflare (1.1.1.1) or Quad9 (9.9.9.9). You should not see DNS servers belonging to your home ISP. Seeing your cable company or mobile carrier DNS servers is a red flag that needs addressing.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-3">
+              Can a DNS leak test give false positives?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-3">
+              <p>Occasionally, DNS leak tests can flag VPN providers who use distributed DNS infrastructure across multiple countries, showing servers in locations other than your connected VPN server. This is not necessarily a leak. The key indicator is whether the DNS operator is your home ISP or a trusted privacy service.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-4">
+              Is DNS over HTTPS the same as VPN DNS protection?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-4">
+              <p>No. DNS over HTTPS encrypts your DNS queries in transit, preventing network observers from reading them. This is useful but different from VPN DNS protection. When you use a VPN, all traffic including DNS should route through the encrypted tunnel to the VPN's own DNS servers.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="ad-container" aria-label="Advertisement"><p class="ad-label">Advertisement</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6491893479956999"
      crossorigin="anonymous"></script>

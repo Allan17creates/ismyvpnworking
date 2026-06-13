@@ -86,6 +86,15 @@
       <article class="article-body">
 
         <p>The VPN industry does an excellent job of marketing fear. Advertisements show hackers in hoodies intercepting your data on public Wi-Fi and governments monitoring your every click. The reality is both more nuanced and, in some respects, more concerning. A VPN is a genuinely useful privacy tool, but it does not make you invisible, and understanding exactly what changes when you use one will help you make better decisions about when and how to use it.</p>
+        <div class="cta-box" style="background:var(--surface-2,#1e2535); border-left:4px solid var(--accent-green,#00D4AA); margin-bottom:2rem;">
+          <h3 style="margin-top:0;">What You Will Learn</h3>
+          <ul style="margin:0.5rem 0 0 0; padding-left:1.2rem;">
+              <li>Exactly what data is exposed when you browse without a VPN</li>
+              <li>What a VPN actually hides and what it does not</li>
+              <li>When using a VPN makes a meaningful privacy difference</li>
+              <li>When a VPN is not enough on its own</li>
+          </ul>
+        </div>
 
         <h2>What Is Actually Exposed Without a VPN?</h2>
         <p>Without a VPN, several parties can see different aspects of your internet activity:</p>
@@ -158,6 +167,56 @@
 
         <h2>The Most Important Thing: Verify It Is Working</h2>
         <p>All of the privacy benefits described above only exist if your VPN is actually functioning correctly. A VPN with a DNS leak, a WebRTC leak, or a broken tunnel provides none of these benefits while creating a false sense of security. Before trusting your VPN with anything that matters, verify it is working with a comprehensive test.</p>
+
+        
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq" role="list">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-0">
+              What does a VPN actually hide?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-0">
+              <p>A properly functioning VPN hides your real IP address from the websites you visit, encrypts your traffic from your ISP so they cannot see the content of your connections, hides your DNS queries from your ISP, and makes it harder for network-level observers to monitor your traffic. It does not hide your activity from the websites themselves or prevent cookies from tracking you across sites.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-1">
+              Can my ISP still see what I do with a VPN?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-1">
+              <p>With a VPN active, your ISP can see that you are connected to a VPN server and roughly how much data you are sending, but they cannot see the content of your traffic or which websites you are visiting. Without a VPN, your ISP can see every domain you visit. In many countries, ISPs are legally required to log and share this data with authorities or advertisers.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-2">
+              Does a VPN make me completely anonymous online?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-2">
+              <p>No. A VPN improves your privacy significantly but does not provide complete anonymity. Websites can still identify you through browser fingerprinting, cookies, logged-in accounts, and behavioural patterns. Your VPN provider can also see your traffic unless they have a genuinely verified no-logs policy.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-3">
+              Is a VPN worth it if I only use HTTPS websites?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-3">
+              <p>Yes. HTTPS protects the content of individual connections but not your DNS queries, your IP address, or the pattern of which sites you visit. A VPN addresses all of these. It is particularly valuable on public Wi-Fi, where even HTTPS connections can be subject to interception attempts.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-body-4">
+              Do I need a VPN on my phone?
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__body" id="faq-body-4">
+              <p>Mobile devices are particularly vulnerable because they frequently switch between networks. Each switch is a potential exposure point. A VPN on your phone provides consistent protection across all these network changes, though you need to ensure the VPN app has a kill switch for when connections drop.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="ad-container" aria-label="Advertisement"><p class="ad-label">Advertisement</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6491893479956999"
      crossorigin="anonymous"></script>
