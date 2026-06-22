@@ -23,7 +23,10 @@
       "Bash(git -C \"D:/ismyvpnworking\" add images/logo.png.png blog/ about.html blog.html contact.html index.html privacy.html 404.html)",
       "mcp__Claude_Preview__preview_start",
       "mcp__Claude_in_Chrome__tabs_context_mcp",
-      "Bash(git -C \"D:/ismyvpnworking\" add ads.txt)"
+      "Bash(git -C \"D:/ismyvpnworking\" add ads.txt)",
+      "WebFetch(domain:ismyvpnworking.app)",
+      "Bash(xargs sed -i 's/www\\\\.ismyvpnworking\\\\.app/ismyvpnworking.app/g')",
+      "Bash(git -C \"D:/ismyvpnworking\" add -A)"
     ]
   }
 }
